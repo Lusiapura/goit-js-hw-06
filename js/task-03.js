@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const list = document.querySelector('ul');
+
+const imgCard = images.map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`);
+
+
+list.insertAdjacentHTML('afterbegin', imgCard);
+console.log(imgCard);
+
+const liEl = element.querySelectorAll('li');
+const imgEl = element.querySelectorAll('img');
+liEl.classList.add('listStyle');
+imgEl.classList.add('imgStyle');
+listStyle.listStyleType = 'none';
+imgStyle.width = '170px';
