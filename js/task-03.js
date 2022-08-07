@@ -15,16 +15,19 @@ const images = [
 
 
 const list = document.querySelector('ul');
+const listGallery = document.querySelector('.gallery');
+const imgCard = images.map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`).join("");
+listGallery.insertAdjacentHTML('afterbegin', imgCard);
 
-const imgCard = images.map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`);
+const li = document.querySelector('li');
+li.classList.add("list-li");
+
+const img = document.querySelector('img');
+img.classList.add("list-img");
+
+const listStyle = document.querySelector('.list-li');
+listStyle.listStyleType = "none"
+img.width = 200;
+//console.log(imgCard);
 
 
-list.insertAdjacentHTML('afterbegin', imgCard);
-console.log(imgCard);
-
-const liEl = element.querySelectorAll('li');
-const imgEl = element.querySelectorAll('img');
-liEl.classList.add('listStyle');
-imgEl.classList.add('imgStyle');
-listStyle.listStyleType = 'none';
-imgStyle.width = '170px';
